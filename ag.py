@@ -135,7 +135,6 @@ elif page == "Investment Profiling":
 elif page == "Market Intelligence":
 
     st.header("📈 Market Intelligence")
-    
     numeric_columns= df.select_dtypes(
             include="number").columns.tolist()
     
@@ -181,7 +180,7 @@ elif page == "Market Intelligence":
             numeric_columns
         )
         fig, ax = plt.subplots(figsize=(8, 5))
-    
+        
         ax.hist(df[selected].dropna(), 
                 bins=20,
         )
